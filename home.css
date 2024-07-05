@@ -1,0 +1,443 @@
+:root {
+  --color-1: #322C2B;
+  --color-2: #AF8260;
+  --color-3: #333333;
+}
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  /* background-color: #D4D4D4; */
+  background-color: #D1CBC7;
+}
+
+
+/* Navigation Bar styling */
+.navbar {
+  font-family: "Potta One";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--color-1);
+  color: #FDF5E6;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
+.company-name {
+  border: 3px solid black;
+  padding: 5px;
+  background-color: var(--color-2);
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  background-color: var(--color-2);
+  margin: 0 5px;
+  color: #FDF5E6;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+
+.nav-link:hover {
+  background-color: #803D3B;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .navbar-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+/* iklan styling */
+
+.ads-section {
+  padding: 20px;
+  /* background-color: #f4f4f4; */
+}
+
+.ads-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+}
+
+.ad-item {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ad-item img {
+  width: 100%;
+  max-height: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ad-item p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .ad-item {
+    width: 100%;
+  }
+}
+
+
+/* Opening styling */
+.welcome-section {
+  font-family: "Potta One";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 10px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* max-width: 1500px; */
+  /* width: 100%; */
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.welcome-text {
+  text-align: center;
+  flex: 1;
+  margin: 0 20px;
+  max-width: 600px;
+}
+
+.welcome-text h1 {
+  margin: 0 0 10px;
+}
+
+.welcome-text p {
+  margin: 0;
+}
+
+.view-menu {
+  text-align: center;
+}
+
+.menu-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-2);
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 3px solid black;
+  transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #803D3B;
+  color: wheat;
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar,
+  .view-menu {
+    margin-bottom: 20px;
+  }
+
+  .welcome-text {
+    margin: 0;
+  }
+}
+
+/* Best Seller Styling */
+.best-seller {
+  font-family: "Potta One";
+  text-align: center;
+  padding: 20px;
+  /* background-color: #f4f4f4; */
+}
+
+.best-seller h2 {
+  margin-bottom: 20px;
+}
+
+.best-seller-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.best-seller-item {
+  flex: 1;
+  margin: 10px;
+  max-width: 200px;
+}
+
+.best-seller-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 40px;
+}
+
+.more-button-container {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.more-button {
+  font-family: "Potta One";
+  height: 50px;
+  background-color: var(--color-2);
+  color: black;
+  padding: 10px 20px;
+  border: 3px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.more-button a {
+  text-decoration: none;
+  color: black;
+}
+
+.more-button:hover {
+  background-color: #803D3B;
+  color: wheat;
+}
+
+@media (max-width: 768px) {
+  .best-seller-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .best-seller-item {
+    max-width: none;
+    width: 100%;
+  }
+
+  .more-button-container {
+    text-align: center;
+  }
+}
+
+
+/* Suasana Styling */
+.horizontal-scroll {
+  padding: 20px;
+  /* background-color: #f4f4f4; */
+}
+
+.horizontal-scroll h2 {
+  font-family: "Potta One";
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+}
+
+.scroll-item {
+  font-family: "Potta One";
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.scroll-item img {
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px black;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .scroll-item {
+    width: 200px;
+  }
+}
+
+
+/* Footer Styling */
+footer {
+  width: 100%;
+  align-items: center;
+  background-color: var(--color-3);
+  color: white;
+  /* padding: 20px 0 0 0; */
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  /* padding: 10px; */
+}
+
+.footer-section.logo {
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer-section.logo img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 30px;
+}
+
+.footer-section.social-media ul {
+  list-style: none;
+  width: max-content;
+  padding: 0;
+}
+
+.footer-section.social-media ul li {
+  width: max-content;
+  margin: 15px 0;
+  align-items: center;
+}
+
+.footer-section.social-media ul li a {
+  width: max-content;
+  display: flex;
+  height: auto;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+}
+
+.footer-section.social-media ul li a img {
+  width: 60px;
+}
+
+.footer-section.social-media ul li a p {
+  margin-left: 10px;
+}
+
+.footer-section.social-media ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section.maps iframe {
+  width: 100%;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 5px;
+  background-color: var(--color-2);
+  align-items: center;
+}
+
+.footer-bottom div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.footer-bottom div p {
+  margin: 0px 10px;
+}
+
+.footer-bottom img {
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section.maps iframe {
+    max-width: 100%;
+  }
+}
+
+
+/* styles.css */
+/* styles.css */
